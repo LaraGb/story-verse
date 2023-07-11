@@ -1,12 +1,13 @@
-import React from 'react'
-import pageIcons from '@/shared/utils/pageIcons'
+import React from "react";
+import pageIcons from "@/shared/utils/pageIcons";
+import IconCircle from "@/shared/components/global/icon-circle-btn/IconCircle";
 
 const Notification = () => {
   return (
-    <div>
-      <pageIcons.Bell fontSize={'1.3rem'}/>
-    </div>
-  )
-}
+    <IconCircle>
+      <pageIcons.Bell fontSize={"1rem"} />
+    </IconCircle>
+  );
+};
 
-export default Notification
+export default Notification;

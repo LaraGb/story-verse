@@ -1,31 +1,41 @@
-import { createServerContext } from 'react';
-import TopBar from './components/top-bar/Index';
-import SideBar from './components/side-bar/Index';
+"use client"
+import { useState } from 'react';
+import TopBar from './components/top-bar/TopBar';
+import SideBar from './components/side-bar/SideBar';
 
-function MainLayout() {
-  
+export default function MainLayout({children}:{children:React.ReactNode}) {
+  const [isSideBarOpen, setIsSideBarOpen] = useState(true);
+
+  const toggleSidebar = () => {
+    setIsSideBarOpen(!isSideBarOpen);
+  }; 
  
   return (
-    <div>
-     <div className="h-screen">
-     <header>
-        <TopBar/>
-      </header>
+    <div className="flex h-screen">
 
-      <div className="flex bg-gray-100 h-full">
-        {true && (
-          <aside className="w-64 bg-gray-200">
-            <SideBar/>
-           </aside>
-        )}
+    <aside
+       aria-label="sidebar"
+       className={`h-full w-64 fixed left-0 top-0 transition-transform duration-300 ${
+         isSideBarOpen ? '-translate-x-full' : 'translate-x-0'
+       } md:translate-x-0 md:static md:w-auto`}
+    >
+      <SideBar/>
+    </aside>
 
-        <main className="flex flex-1">
-          {/* Conteúdo principal */}
-        </main>
-      </div>
+    <div className="flex flex-col flex-1">
+
+      <TopBar
+        setIsSideBarOpen={setIsSideBarOpen}
+      />
+
+
+      <main className="flex-1 p-4 overflow-y-auto">
+         {children}
+      </main>
+
     </div>
-    </div>
+
+  </div>
   )
 }
 
-export default MainLayout
