@@ -1,12 +1,12 @@
 import React from 'react'
 import { IconType } from 'react-icons'
 
-type TIconCircle = {
+type TIconCircleBtn = {
   icon:React.ReactNode;
-  onClick:(event: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?:(event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-export default function IconCircleBtn({icon,onClick}:TIconCircle) {
+export default function IconCircleBtn({icon,onClick}:TIconCircleBtn) {
   return (
     <button 
       onClick={onClick}

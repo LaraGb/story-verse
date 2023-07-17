@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={`text-slate-600 ${nunito.className} text-secondary`}>
+      <body className={`text-slate-500 ${nunito.className} text-secondary`}>
         <MainLayout>
           {children}
         </MainLayout>

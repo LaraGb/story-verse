@@ -6,14 +6,14 @@ import ItemBar from './components/ItemBar';
 
 export default function SideBar() {
   return (
-   <div className="h-full py-10 overflow-y-auto bg-white">
+   <div className="h-full py-8 px-[2vw] overflow-y-auto bg-white">
       <div className='h-full flex flex-col  items-center space-y-10'>
-         <div>
+         <div className='text-primary'>
             Medi Track
          </div>
 
          <div className='grow'>
-            <ul className='flex flex-col space-y-1'>
+            <ul className='flex flex-col space-y-2'>
                {
                 routesData?.map(route => (
                      <ItemBar key={route.path} {...route}/>

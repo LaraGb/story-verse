@@ -4,11 +4,12 @@ import {FaCalendarDays} from 'react-icons/fa6';
 import {IoIosArrowDown} from 'react-icons/io';
 import {HiOutlineMenuAlt3} from 'react-icons/hi';
 import {RiLogoutBoxRFill,RiSettings3Fill} from 'react-icons/ri';
-import {MdLibraryBooks} from 'react-icons/md';
+import {MdLibraryBooks,MdOutlineDonutLarge} from 'react-icons/md';
 import {BsFillGridFill} from 'react-icons/bs';
 
 
 const pageIcons = {
+  Logo: MdOutlineDonutLarge,
   User:FaUserAlt,
   Docs:MdLibraryBooks,
   Tips:FaLightbulb,
@@ -18,7 +19,7 @@ const pageIcons = {
   ArrowDown:IoIosArrowDown,
   Menu:HiOutlineMenuAlt3,
   LogOut:RiLogoutBoxRFill,
-  Settings:MdLibraryBooks,
+  Settings:RiSettings3Fill,
   Grid:BsFillGridFill,
 }
 

@@ -11,11 +11,11 @@ export default function MainLayout({children}:{children:React.ReactNode}) {
   }; 
  
   return (
-    <div className="flex h-screen">
+    <div className="flex h-screen bg-slate-50">
 
     <aside
        aria-label="sidebar"
-       className={`h-full w-64 fixed left-0 top-0 transition-transform duration-300 ${
+       className={`h-full fixed left-0 top-0 transition-transform duration-300 ${
          isSideBarOpen ? '-translate-x-full' : 'translate-x-0'
        } md:translate-x-0 md:static md:w-auto`}
     >
@@ -30,7 +30,7 @@ export default function MainLayout({children}:{children:React.ReactNode}) {
 
 
       <main className="flex-1 p-4 overflow-y-auto">
-         {children}
+          {children}
       </main>
 
     </div>

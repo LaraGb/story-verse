@@ -1,5 +1,5 @@
 import React from "react";
-import WideWrapping from "@/shared/components/global/wide-wrapping/Index";
+import WideWrapping from "@/shared/components/global/wide-wrapping/WideWrapping";
 import Center from "@/shared/components/global/center/Index";
 import Logo from "@/shared/components/global/logo/Logo";
 import Notification from "./components/Notification";
@@ -7,6 +7,7 @@ import Dropdown from "@/shared/components/global/dropdown/Dropdown";
 import UserAvatarField from "@/shared/components/global/user-avatar-field/UserAvatarField";
 import pageIcons from "@/shared/utils/pageIcons";
 import IconCircleBtn from "@/shared/components/global/icon-circle-btn/IconCircle";
+import OptionsField from "./components/OptionsField";
 
 type TTopBar = {
   setIsSideBarOpen:React.Dispatch<React.SetStateAction<boolean>>;
@@ -20,11 +21,7 @@ export default function TopBar({setIsSideBarOpen}:TTopBar) {
           <Logo />
           <div className="flex items-center space-x-6">
             <Notification />
-            <UserAvatarField
-              name="UserName"
-              info="Human"
-              Icon={pageIcons.ArrowDown}
-            />
+            <OptionsField/>
             <div className="block md:hidden">
              <IconCircleBtn
                onClick={()=>setIsSideBarOpen(state => !state)}
