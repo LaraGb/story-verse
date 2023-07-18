@@ -9,26 +9,14 @@ import UserDataSideBar from "@/shared/components/global/user-data-sidebar/UserDa
 import WideWrapping from "@/shared/components/global/wide-wrapping/WideWrapping";
 import { SwiperSlide } from "swiper/react";
 
-
 export default function Page() {
   return (
     <WideWrapping>
       <Row>
-
-        <div className="flex-grow">
-          <Column>
-            <div>
-               <Heading content="Good Morning Anima" />
-               <p className="font-medium">Have a nice day</p>
-            </div>
-            <Slide configs={{slidesPerView:4}} dataArr={[1,2,3,4,5]} Component={TipsCard}/>
-          </Column>
+        <div className="w-32 grow">
+          <Slide/>
         </div>
-
-        <HiddenOnLg>
-          <UserDataSideBar />
-        </HiddenOnLg>
-
+        <UserDataSideBar/>
       </Row>
     </WideWrapping>
   );

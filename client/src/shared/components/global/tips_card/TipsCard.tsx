@@ -7,7 +7,7 @@ export default function TipsCard() {
   return (
     <div>
 
-        <div className="h-44 bg-violet-300 flex items-center justify-center rounded-xl">
+        <div className="h-52 bg-violet-300 flex items-center justify-center rounded-xl">
           <Animation/>
         </div>
         

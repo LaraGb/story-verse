@@ -1,21 +1,27 @@
-'use client'
-import "swiper/css";
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+"use client";
+import "swiper/react";
+import 'swiper/css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperOptions } from "swiper/types";
+import TipsCard from "../tips_card/TipsCard";
 
 type Props = {
-  configs:SwiperOptions,
-  Component:React.FunctionComponent,
-  dataArr:any[]
-}
+  configs: SwiperOptions;
+  Component: React.FunctionComponent;
+  dataArr: any[];
+};
 
-export default function Slide({configs,Component,dataArr}:Props){
-  return(
-    <>
-       
-    </>
-  )
+export default function Slide() {
+  return (
+    <Swiper slidesPerView={4} spaceBetween={25}>
+      {Array(10)
+        .fill(0)
+        .map((item) => (
+          <SwiperSlide><TipsCard/></SwiperSlide>
+        ))}
+    </Swiper>
+  );
 }
 
 /*type ComponentProps = {

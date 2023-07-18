@@ -16,8 +16,8 @@ export default function Animation() {
     <div>
       <Lottie 
 	      options={defaultOptions}
-        height={140}
-        width={140}
+        height={150}
+        width={150}
       />
     </div>
   )
